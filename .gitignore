@@ -1,0 +1,4 @@
+zmqserver.log
+*.pyc
+/lib/__pycache__
+test.py

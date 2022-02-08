@@ -1,0 +1,15 @@
+#Copy me to /usr/lib/systemd/system/
+#And systemctl daemon-reload "systemctl daemon-reload"
+[Unit]
+Description=mtszmq service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/template-zeromq/
+ExecStart=/root/template-zeromq/zmqserver.py
+StandardInput=tty-force
+#User=oneadmin
+
+[Install]
+WantedBy=multi-user.target
